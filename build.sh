@@ -39,12 +39,13 @@ fi
 # Vars
 INSTALL_DIR="${WORKSPACE}/install_dir"
 SRC_DIR="${WORKSPACE}/source_dir"
+PKG_DIR="${WORKSPACE}/_pkg"
 CONTROL_DIR="${WORKSPACE}/control"
 PKG_NAME='s3cmd'
 ITERATION="${ORG_PREFIX}`date +%y%m%d%H%M`"
 
 
-mkdir -p ${INSTALL_DIR} ${SRC_DIR}
+mkdir -p ${INSTALL_DIR} ${SRC_DIR} ${PKG_DIR}
 
 # Download and untar
 wget https://github.com/s3tools/s3cmd/archive/v${VERSION}.tar.gz -P ${SRC_DIR}
@@ -78,5 +79,5 @@ fpm --force \
     -C ${INSTALL_DIR} \
     --description 'Command Line S3 Client and Backup for Linux and Mac' \
     --name 's3cmd' \
-    --package s3cmd-VERSION-${ITERATION}-ARCH.deb \
+    --package ${PKG_DIR}/s3cmd-VERSION-${ITERATION}-ARCH.deb \
     .
