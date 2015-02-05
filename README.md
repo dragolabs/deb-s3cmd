@@ -5,7 +5,7 @@
 You need ruby and fpm gem for create .deb package.
 
 ### Usage
-You can use build.sh with Jenkins or in your terminal. Set env vars VENDOR and MAINTAINER to sign created package. Also you can specify version of s3cmd as first parameter for script .
+You can use build.sh with Jenkins or in your terminal. 
 
 
 ```bash
