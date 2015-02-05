@@ -1,0 +1,3 @@
+language: ruby
+install: gem install fpm
+script: ./build.sh -o travis -m "Travis CI"
